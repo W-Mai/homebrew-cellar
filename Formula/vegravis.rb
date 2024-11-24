@@ -1,20 +1,20 @@
 class Vegravis < Formula
   desc "Vegravis is a vector graphics visualizer.It can visualize vector graphics on a canvas, and can also visualize vector graphics in other formats through conversion."
   homepage "https://w-mai.github.io/vegravis"
-  version "0.4.1"
+  version "0.4.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/vegravis/releases/download/v0.4.1/vegravis-aarch64-apple-darwin.tar.xz"
-      sha256 "45212721dc31240e3b1c51f2fe7d2cc653823d842780f3efd5b33381c2c5d5cd"
+      url "https://github.com/W-Mai/vegravis/releases/download/v0.4.2/vegravis-aarch64-apple-darwin.tar.xz"
+      sha256 "161df3d857c84eccbfb9f48e93c537f53ac92497683b813146a4c0294c7521e3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/vegravis/releases/download/v0.4.1/vegravis-x86_64-apple-darwin.tar.xz"
-      sha256 "4acf3332038e2aa90807709229ffcb94e44851247c37e54fee94211f08aeb720"
+      url "https://github.com/W-Mai/vegravis/releases/download/v0.4.2/vegravis-x86_64-apple-darwin.tar.xz"
+      sha256 "6fb3befc3feb00c8da4b00822d4e9e52b1db9ac9f7fe55d43f0ac356e3d7c81b"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/W-Mai/vegravis/releases/download/v0.4.1/vegravis-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "1a789f798c479d48dac8ba5a3b7581a42b590b95eefad33aa251d7aa2ab35bd5"
+    url "https://github.com/W-Mai/vegravis/releases/download/v0.4.2/vegravis-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "d1bb96a1d4f253eccad7e3b8e07687ec8550911ba9991f05095a5269c51d62e5"
   end
 
   BINARY_ALIASES = {
