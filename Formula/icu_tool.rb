@@ -1,25 +1,25 @@
 class IcuTool < Formula
   desc "Image Converter Ultra"
   homepage "https://github.com/W-Mai/icu"
-  version "0.1.16"
+  version "0.1.17"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/icu/releases/download/v0.1.16/icu_tool-aarch64-apple-darwin.tar.xz"
-      sha256 "80afb92d38257e7a99103ff8692c291fc88b0ebad6d232a0c9e558c5ff8d8265"
+      url "https://github.com/W-Mai/icu/releases/download/v0.1.17/icu_tool-aarch64-apple-darwin.tar.xz"
+      sha256 "b34831abb64f8d99f7d62a28ff3b903170086a518b89a624ddf223d8c2ad198b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/icu/releases/download/v0.1.16/icu_tool-x86_64-apple-darwin.tar.xz"
-      sha256 "fbd7239070b8bcf25f54b7d6a0246688cdd3a1a6bd569b4d937c1d4e5932ebc0"
+      url "https://github.com/W-Mai/icu/releases/download/v0.1.17/icu_tool-x86_64-apple-darwin.tar.xz"
+      sha256 "cc4513da79ed36fa96a7dcd82fd74a74dfa9e7d2adbf192f92ad597d967098a8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/icu/releases/download/v0.1.16/icu_tool-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7278a211f13e7c71afc321b8cad91d7098d0e137752db38b78cedfc2f32c0b89"
+      url "https://github.com/W-Mai/icu/releases/download/v0.1.17/icu_tool-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c6e530005fc3efe823c68f6ec3fc398fb83553043530dff39230e7c97a48f117"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/icu/releases/download/v0.1.16/icu_tool-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1836c7380559096dbe664c40848e2d57c76072b3e64193ca1827e0194499c163"
+      url "https://github.com/W-Mai/icu/releases/download/v0.1.17/icu_tool-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c410b8b207d7d22cbb9dcaa7f5c67b2e18728d07d342a151008a19b64d10a7a8"
     end
   end
   license "MIT"
