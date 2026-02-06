@@ -1,25 +1,25 @@
 class FilmrApp < Formula
   desc "CLI and GUI application for filmr, a high-fidelity film simulation engine."
   homepage "https://benign.host/"
-  version "0.6.1"
+  version "0.6.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/filmr/releases/download/v0.6.1/filmr_app-aarch64-apple-darwin.tar.xz"
-      sha256 "9069f0900a17471dc654d40a4cb1688fe574f364f55e0d8d319f79f3aea94e79"
+      url "https://github.com/W-Mai/filmr/releases/download/v0.6.2/filmr_app-aarch64-apple-darwin.tar.xz"
+      sha256 "7063fa1cac8530bf296194d89b629ed775c543cde72c9d0f51f628a76be900a3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/filmr/releases/download/v0.6.1/filmr_app-x86_64-apple-darwin.tar.xz"
-      sha256 "ec712421c0b40ad84bb59cdbf6383a0a49beaa034aa7518c1d725869b395daba"
+      url "https://github.com/W-Mai/filmr/releases/download/v0.6.2/filmr_app-x86_64-apple-darwin.tar.xz"
+      sha256 "056326dfbef299ea92978856a5a2ff912ff5795a0bcdd2fc5a0f3d5a5a8d4ae3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/filmr/releases/download/v0.6.1/filmr_app-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d14319743bd4af6aa949b282bbb8c12bbc779ca3e3e8475d07ab88db430443d5"
+      url "https://github.com/W-Mai/filmr/releases/download/v0.6.2/filmr_app-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b583d009e6f8ec26cb26bb0bdd09317e74229023043a9455b4145998f15e01ff"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/filmr/releases/download/v0.6.1/filmr_app-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7f78ab1064909ee69241a4e91176d1d4fe0b6b474e93a057c1487ebba3ba4ae9"
+      url "https://github.com/W-Mai/filmr/releases/download/v0.6.2/filmr_app-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4cffa98a69d409e876a513f0f229424a2aab695893e92b9669862b18894a855e"
     end
   end
   license "MIT"
