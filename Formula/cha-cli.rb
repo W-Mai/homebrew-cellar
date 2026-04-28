@@ -1,25 +1,25 @@
 class ChaCli < Formula
   desc "Cha — pluggable code smell detection CLI (察)"
   homepage "https://github.com/W-Mai/Cha"
-  version "1.11.1"
+  version "1.12.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/Cha/releases/download/v1.11.1/cha-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "337db79a81faa1420b364ff7f02b28ddde654b23f727b8a0907c13b0f0888582"
+      url "https://github.com/W-Mai/Cha/releases/download/v1.12.0/cha-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "66cd8a91060ab35a875859ec37dc67281fce522f8cedaf0c44d1e54d02578f39"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/Cha/releases/download/v1.11.1/cha-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "95332edb682e34e3c28b2b9e296c4b786e9e34ca19885fefe31660401067ca90"
+      url "https://github.com/W-Mai/Cha/releases/download/v1.12.0/cha-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "14d85969451ff6ec12012ff8f442edf0ec5edb43d982b72741d9923b0ef3f814"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/Cha/releases/download/v1.11.1/cha-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7ecb364ece8043b2c5df896a7e5a06f8be2755d1c91388ca297b2d23d11e0df2"
+      url "https://github.com/W-Mai/Cha/releases/download/v1.12.0/cha-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "af442820d30779fc32cd21ef9a9e750d9679f529933e62258c0e55948ece6ffa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/Cha/releases/download/v1.11.1/cha-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6edf72b5442b7a2f32ed6b6712a0d219dbb1448194441820b055c26a1e13d053"
+      url "https://github.com/W-Mai/Cha/releases/download/v1.12.0/cha-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "50c59017a9281287dea6f524cd74fcea2e1c47c927a050f9e7ab052167bbd8b3"
     end
   end
   license "MIT"
