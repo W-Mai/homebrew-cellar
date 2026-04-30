@@ -1,15 +1,15 @@
 class Xbark < Formula
   desc "Desktop sticker popup daemon — say :sticker[laugh]: anywhere, see it fly into your screen"
   homepage "https://github.com/W-Mai/xBark"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/xBark/releases/download/v0.1.2/xbark-aarch64-apple-darwin.tar.xz"
-      sha256 "837e4ed2de9ce9ad4a255fbe7326b5a833a701028609d4e393c9cbd57eb9a39c"
+      url "https://github.com/W-Mai/xBark/releases/download/v0.1.3/xbark-aarch64-apple-darwin.tar.xz"
+      sha256 "104a4c634065fa7ca517718b31cff1177cfe93bbfcd6e9f8e502ea3a5577af3f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/xBark/releases/download/v0.1.2/xbark-x86_64-apple-darwin.tar.xz"
-      sha256 "85863638443181b3b904779bf4478562aade41eefec7b1b18c5ca1cbc7befd35"
+      url "https://github.com/W-Mai/xBark/releases/download/v0.1.3/xbark-x86_64-apple-darwin.tar.xz"
+      sha256 "d85aaf6fb6f3b658dcbf090eeab0cefbec00415adfd173dc359e9bd18047aadd"
     end
   end
   license "MIT"
