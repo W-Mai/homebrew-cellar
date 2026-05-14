@@ -5,21 +5,21 @@ class ChaCli < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/W-Mai/Cha/releases/download/v1.14.0/cha-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "5bac4e050c8ade566bdf5aadda52cd26a5077ce1058d2fa7fd4c5670f5657a3f"
+      sha256 "abebb49bc09751119f8205b702c01ac480301fe55edf37b8aabcbcc27db36863"
     end
     if Hardware::CPU.intel?
       url "https://github.com/W-Mai/Cha/releases/download/v1.14.0/cha-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "4b27253920d27c43ae758c32de5b5a37a9981a2e858b7efc255d801159e82216"
+      sha256 "486579ea69b7efd9204d8de79749ffcebce6c086cae93cc2d144649237dfc03b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/W-Mai/Cha/releases/download/v1.14.0/cha-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7b036137a0a22d5bd1170f7ea09cc9cc68ee21e7e56b21f793affdf987b5e666"
+      sha256 "006678f603a29a7bafa35ba7c5e776ffe0356fb51b2379ea0de3ed88fc149f44"
     end
     if Hardware::CPU.intel?
       url "https://github.com/W-Mai/Cha/releases/download/v1.14.0/cha-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6f065172fa3bad9a893e7cf5a9c58372e71a39a573bdb2ce8108df53f86f9d08"
+      sha256 "e9c3b21fb72b058a86343f285239003fffb71b2d11a58e48eba364c0cad47cf8"
     end
   end
   license "MIT"
