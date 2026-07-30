@@ -1,25 +1,25 @@
 class AtmanDaemon < Formula
   desc "atman headless daemon — Unix socket + HTTP SSE server for the atman AI coding agent"
   homepage "https://atman.run"
-  version "1.3.0"
+  version "1.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.3.0/atman-daemon-aarch64-apple-darwin.tar.xz"
-      sha256 "6aa1e1a3369dbfd9a4a5e1c67fd366dff6f7127a80098d2fd200b780d5c3854c"
+      url "https://github.com/W-Mai/atman/releases/download/v1.4.0/atman-daemon-aarch64-apple-darwin.tar.xz"
+      sha256 "c6b40d62561d1d2b507bfffa3ae60cbfee80d4e0bc851a80f5862aadbe852c6a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.3.0/atman-daemon-x86_64-apple-darwin.tar.xz"
-      sha256 "95b05dd10f8cebe9c87abffd94642a400a647f4ebdf46a6bffeb8c1718d96e97"
+      url "https://github.com/W-Mai/atman/releases/download/v1.4.0/atman-daemon-x86_64-apple-darwin.tar.xz"
+      sha256 "630ce5d7a2c31d9c0dffb5f2cb5bbf7667b978c1cf0b5520b9c39502b901541f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.3.0/atman-daemon-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bf3a0f23bd81fdbc476e967269ef0dfcc2068612849cdea5b6aee60d50008e8b"
+      url "https://github.com/W-Mai/atman/releases/download/v1.4.0/atman-daemon-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "560976590f63972392f38ef329f6c8d99d47ad67c1e89bdbd2d55dbf5379d349"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.3.0/atman-daemon-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f2db09c6981545a92ce96cc46946238fb850aba6895cda7a9244c142c562f9a2"
+      url "https://github.com/W-Mai/atman/releases/download/v1.4.0/atman-daemon-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "73ef4c46d12e2b2f0bf7b4b42ed83c6dc09a7b3534af83654c82fc4991d4696d"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
