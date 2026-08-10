@@ -1,25 +1,25 @@
 class AtmanDaemon < Formula
   desc "atman headless daemon — Unix socket + HTTP SSE server for the atman AI coding agent"
   homepage "https://atman.run"
-  version "1.6.0"
+  version "1.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.6.0/atman-daemon-aarch64-apple-darwin.tar.xz"
-      sha256 "3f202c04826d72f89dcdc84bdf76f53d52f2e199a2be1ca4bbd10a2074f1a6ab"
+      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-daemon-aarch64-apple-darwin.tar.xz"
+      sha256 "4c49070ec058821a802529df1ff1161dd11f564e01cd9116b7ad095f19745522"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.6.0/atman-daemon-x86_64-apple-darwin.tar.xz"
-      sha256 "a36ae0fe15bca918cde5467def954dd39011e038fe0616771663e5864f95a68b"
+      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-daemon-x86_64-apple-darwin.tar.xz"
+      sha256 "2469d59215d8ec48b70ea300b0f22579b7ee0631ed3f2ea260ad961a406c1da5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.6.0/atman-daemon-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "718f77192ce87c8bbee854d092ff0ae28c33fd8534c0cfcc07629e36fc674547"
+      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-daemon-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6415287346464855f1ababbdb865e2bf0faf2d049904245177da754b6068c307"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.6.0/atman-daemon-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "20275614e0a0c3e44f008ccbc62b7d322417e8aea9d65ccb5a3aa37e8e2e74f9"
+      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-daemon-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "360e09a7040e706fbde3598786132fb1a827a6928f6d14fbc440683e3b4c95f4"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -51,10 +51,18 @@ class AtmanDaemon < Formula
   end
 
   def install
-    bin.install "atman-daemon" if OS.mac? && Hardware::CPU.arm?
-    bin.install "atman-daemon" if OS.mac? && Hardware::CPU.intel?
-    bin.install "atman-daemon" if OS.linux? && Hardware::CPU.arm?
-    bin.install "atman-daemon" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "atman-daemon"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "atman-daemon"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "atman-daemon"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "atman-daemon"
+    end
 
     install_binary_aliases!
 
