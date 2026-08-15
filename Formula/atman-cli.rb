@@ -1,25 +1,25 @@
 class AtmanCli < Formula
   desc "atman command-line interface — AI coding agent runtime with a Turing-complete .at flow DSL"
   homepage "https://atman.run"
-  version "1.7.0"
+  version "1.8.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "aae58bb508cc361e4c0e1ec02cbc7686efe2a2cdf51fdd803de0b1e2b2f36dcf"
+      url "https://github.com/W-Mai/atman/releases/download/v1.8.0/atman-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "3310f858faa3c9000d61e3c6f2ff6eadcca7b9a5ace4897c0230ebbe4eedcf28"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "2b3c0c12467bba2bdf2d1f358dd692fb0e8ca6ca9bd21c1a19626071e06ede32"
+      url "https://github.com/W-Mai/atman/releases/download/v1.8.0/atman-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "406d52efcaad3735bed7cc3583fcf0023a68e6df748423bd26e64f7bb65c2bc1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6d264e729f705f0d9395bc1a12a2ec9688be46aabe4a39fa2a4c449f3c3ae56b"
+      url "https://github.com/W-Mai/atman/releases/download/v1.8.0/atman-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "81ca0a48190f32c56c23d5db030f8c66f3881c2af9f55b28d731d292e53177aa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.7.0/atman-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "77b087ccbdd7aa4944cd43dd4e21e3a3e79befda89a588db933b5f37c96699b4"
+      url "https://github.com/W-Mai/atman/releases/download/v1.8.0/atman-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e3dd226ffa8872c18c46a513500373b296fce24b2c6472506f481de3a8506116"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -51,10 +51,18 @@ class AtmanCli < Formula
   end
 
   def install
-    bin.install "atman" if OS.mac? && Hardware::CPU.arm?
-    bin.install "atman" if OS.mac? && Hardware::CPU.intel?
-    bin.install "atman" if OS.linux? && Hardware::CPU.arm?
-    bin.install "atman" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "atman"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "atman"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "atman"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "atman"
+    end
 
     install_binary_aliases!
 
