@@ -1,25 +1,25 @@
 class IcuTool < Formula
   desc "Image Converter Ultra"
   homepage "https://w-mai.github.io/icu"
-  version "0.7.0"
+  version "0.8.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/icu/releases/download/v0.7.0/icu_tool-aarch64-apple-darwin.tar.xz"
-      sha256 "18d85cdc3f587924f84541de1ff460f9f277fd8f01a137c5b2eb4d3409fb5596"
+      url "https://github.com/W-Mai/icu/releases/download/v0.8.0/icu_tool-aarch64-apple-darwin.tar.xz"
+      sha256 "1428713d51f24146be87d40bb73bbf538ad96982d45c5980d054d6cfd58ebc61"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/icu/releases/download/v0.7.0/icu_tool-x86_64-apple-darwin.tar.xz"
-      sha256 "16f5e15ec613d1766da9b43a6476bfedffee9d7301db4a1b3d6afa82309c50b2"
+      url "https://github.com/W-Mai/icu/releases/download/v0.8.0/icu_tool-x86_64-apple-darwin.tar.xz"
+      sha256 "b1f7508ee7d45778098efcb4980d9094223d1064d17246946185442431ff582f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/icu/releases/download/v0.7.0/icu_tool-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e022e16d33111feefcab50ac657ed93fb0f8e848c5ba49520c5273af07c9e177"
+      url "https://github.com/W-Mai/icu/releases/download/v0.8.0/icu_tool-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "babd31a54c8b07a983fceefb6f110e1c02c11234a905e5140b91d984c4e51877"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/icu/releases/download/v0.7.0/icu_tool-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9a6051e7eae0e18fc7740cf2cf1ab46d2ce73b7a0aa26c549ee44dbbe38ad58f"
+      url "https://github.com/W-Mai/icu/releases/download/v0.8.0/icu_tool-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "58ca74d1ccb8a7c37cee55f1016479c5eb219bd231bd2b09222fa72033e028b3"
     end
   end
   license "MIT"
@@ -52,10 +52,18 @@ class IcuTool < Formula
   end
 
   def install
-    bin.install "icu" if OS.mac? && Hardware::CPU.arm?
-    bin.install "icu" if OS.mac? && Hardware::CPU.intel?
-    bin.install "icu" if OS.linux? && Hardware::CPU.arm?
-    bin.install "icu" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "icu"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "icu"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "icu"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "icu"
+    end
 
     install_binary_aliases!
 
