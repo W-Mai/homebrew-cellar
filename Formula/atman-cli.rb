@@ -1,25 +1,25 @@
 class AtmanCli < Formula
   desc "atman command-line interface — AI coding agent runtime with a Turing-complete .at flow DSL"
   homepage "https://atman.run"
-  version "1.20.0"
+  version "1.21.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.20.0/atman-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "0538a15ba6f0426f779e6cb22a53ca3f4c6af3735a82ae2096bb770a94a5c928"
+      url "https://github.com/W-Mai/atman/releases/download/v1.21.0/atman-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "19eadb54128b1f2778dba547e790e0c86787ba863612efd367c3b4b6d072a9b8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.20.0/atman-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "eecac95b63f5879b8d5630cebc781428e77d00ea5a9d964c42e12ccdd19364b8"
+      url "https://github.com/W-Mai/atman/releases/download/v1.21.0/atman-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "8cd5a10545a1360027717e95a0a0530088a5dbb0a5a68f8a17b6bd8d7e067e24"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/W-Mai/atman/releases/download/v1.20.0/atman-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e05863b3dc953f931cde43a12d43fe06b96c70de2c59c6635352d2740521725f"
+      url "https://github.com/W-Mai/atman/releases/download/v1.21.0/atman-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cde151dd6a7b8b72420963c965f20e90046b168f043adef17d8e546b09b7fe9d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/W-Mai/atman/releases/download/v1.20.0/atman-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "10b3a8585271754a860f0f130744218e809c0d87504abe071cb0ccff9f66d556"
+      url "https://github.com/W-Mai/atman/releases/download/v1.21.0/atman-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b4430e9ef38d18974666a5c3f24a0daa009b093093a6b8fcdfa18aaeba38cc9d"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
